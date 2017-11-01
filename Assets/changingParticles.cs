@@ -6,6 +6,7 @@ public class changingParticles : MonoBehaviour {
 	int count = 0; 
 	List<GameObject> systems = new List<GameObject>();
 	List<GameObject> woofs = new List<GameObject>();
+	public Camera camera;
 	public 
 	// Use this for initialization
 	void Start () {
@@ -41,6 +42,10 @@ public class changingParticles : MonoBehaviour {
 			woofs.Remove (woof);
 			Destroy (woof);
 	
+		}
+
+		for (int i = 0; i < systems.Count; i++) {
+			systems [i].transform.position = new Vector3(camera.transform.position.x, camera.transform.position.y-6f, camera.transform.position.z);
 		}
 	}
 		
