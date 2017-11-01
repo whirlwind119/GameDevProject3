@@ -5,10 +5,9 @@ using UnityEngine;
 public class MoveLeftRight : MonoBehaviour {
 
     public float xSpeed = 10;
-    public float ySpeed = -5;
 
-    public float lBound = 10;
-    public float rBound = 30;
+    public float lBound = 4;
+    public float rBound = 6;
 
     // Use this for initialization
     void Start () {
@@ -25,6 +24,6 @@ public class MoveLeftRight : MonoBehaviour {
         {
             xSpeed *= -1;
         }
-        transform.position = new Vector3(transform.position.x + xSpeed * Time.deltaTime, transform.position.y + ySpeed * Time.deltaTime, transform.position.z);
+        transform.position = new Vector3(transform.position.x + xSpeed * Time.deltaTime, transform.position.y, transform.position.z);
     }
 }
