@@ -13,12 +13,14 @@ public class Movement : MonoBehaviour {
     GameObject[] obstacles;
     Rigidbody rb;
     bool isGrounded = true;
-
+	public float airModifier = .75f; 
+	float constZSpeed;
 	// Use this for initialization
 	void Start () {
         obstacles = GameObject.FindGameObjectsWithTag("obstacle");
         zSpeedTemp = zSpeed;
         rb = GetComponent<Rigidbody>();
+		constZSpeed = zSpeed;
 
 	}
 	
@@ -46,6 +48,7 @@ public class Movement : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded) {
             rb.AddForce(0, 400, 0);
             isGrounded = false;
+			zSpeed = zSpeed * airModifier;
         }
         
         if (blink) {
@@ -76,6 +79,7 @@ public class Movement : MonoBehaviour {
         }
         if (collision.transform.tag == "ground") {
             isGrounded = true;
+			zSpeed = constZSpeed;
         }
     }
 

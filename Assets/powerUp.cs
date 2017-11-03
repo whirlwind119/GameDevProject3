@@ -17,7 +17,7 @@ public class powerUp : MonoBehaviour {
 
 
 		if (power && Time.time -powerTimer <= 15f) {
-			Debug.Log ("POWER");
+			//Debug.Log ("POWER");
 			foreach (GameObject obstacle in obstacles) {
 				Physics.IgnoreCollision(obstacle.GetComponent<Collider>(), player.GetComponent<Collider>());
 			}
