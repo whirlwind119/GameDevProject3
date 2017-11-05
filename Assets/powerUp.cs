@@ -22,7 +22,7 @@ public class powerUp : MonoBehaviour {
 				Physics.IgnoreCollision(obstacle.GetComponent<Collider>(), player.GetComponent<Collider>());
 			}
 		}
-		if (Time.time - powerTimer > 15f) {
+		if (power && Time.time - powerTimer > 15f) {
 			power = false; 
 			foreach (GameObject obstacle in obstacles) {
 				Physics.IgnoreCollision(obstacle.GetComponent<Collider>(), player.GetComponent<Collider>(),false);
