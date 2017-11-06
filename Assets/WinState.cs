@@ -11,7 +11,7 @@ public class WinState : MonoBehaviour {
         if (coll.gameObject.tag == "Player")
         {
             Debug.Log("SCENE CHANGE", gameObject);
-            Application.LoadLevel("win");
+            SceneManager.LoadScene("win");
         }
     }
 }
