@@ -37,6 +37,7 @@ public class changingParticles : MonoBehaviour {
 				
 				GameObject woof = (GameObject)Instantiate (Resources.Load ("woof"));
 				woof.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z);
+				woof.transform.localScale = new Vector3 (woof.transform.localScale.x * .5f, woof.transform.localScale.y * .5f, woof.transform.localScale.z * .5f);
 				woofs.Add (woof);
 
 				audio = woof.AddComponent<AudioSource> ();
