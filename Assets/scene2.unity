@@ -145,6 +145,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zSpeed: 3
   xSpeed: 10
+  jump: 1000
 --- !u!23 &25310165
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -549,7 +550,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   xSpeed: 10
-  ySpeed: -5
   lBound: 10
   rBound: 30
 --- !u!54 &565830320
@@ -862,7 +862,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zSpeed: 3
-  ySpeed: -5
 --- !u!1 &1106303125
 GameObject:
   m_ObjectHideFlags: 0
@@ -1044,7 +1043,7 @@ GameObject:
   - component: {fileID: 1827644653}
   m_Layer: 0
   m_Name: platform
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
