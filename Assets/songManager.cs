@@ -1,17 +1,27 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class songManager : MonoBehaviour {
 
+    public static string currentScene = "";
+    public static string previousScene = "";
+
 	// Use this for initialization
 	void Start () {
-		
-	}
+        Debug.Log("TESTING DEBUG LOG");
+    }
 	
 	// Update is called once per frame
 	void Update () {
-		
+		if(SceneManager.GetActiveScene().name != currentScene)
+        {
+            previousScene = currentScene;
+            currentScene = SceneManager.GetActiveScene().name;
+            Debug.Log("Current Scene: " + currentScene);
+            Debug.Log("Previous Scene: " + previousScene);
+        }
 	}
 
 	void Awake(){
