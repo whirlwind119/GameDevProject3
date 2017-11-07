@@ -9,6 +9,7 @@ public class Movement : MonoBehaviour {
     public float xSpeed = 10;
     public float jump = 1000;
 	public int loseTotal = 7; 
+	public int collisions;
 
     float zSpeedTemp;
     bool blink = false;
@@ -18,7 +19,7 @@ public class Movement : MonoBehaviour {
     bool isGrounded = true;
 	public float airModifier = .75f; 
 	float constZSpeed;
-	int collisions;
+
 	// Use this for initialization
 	void Start () {
         obstacles = GameObject.FindGameObjectsWithTag("obstacle");
