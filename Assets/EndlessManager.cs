@@ -14,6 +14,10 @@ public class EndlessManager : MonoBehaviour {
     private GameObject current;
     private GameObject next;
     private GameObject player;
+    private GameObject background;
+    private GameObject floor;
+    private float backgroundDistance;
+    private float fakeGroundDistance;
     private int counter;
     private int counter2;
     private List<GameObject> path = new List<GameObject>();
@@ -23,6 +27,8 @@ public class EndlessManager : MonoBehaviour {
         counter = 1;
         counter2 = 0;
         player = GameObject.FindGameObjectWithTag("Player");
+        background = GameObject.Find("background");
+        floor = GameObject.Find("fakeGround");
         random = Random.Range(1, 5);
         current = Instantiate(pickLevel(random), new Vector3(0f, 0f, 0f), Quaternion.identity);
         path.Add(current);
@@ -33,10 +39,14 @@ public class EndlessManager : MonoBehaviour {
         }
         next = Instantiate(next, new Vector3(0f, 0f, 172.2f * counter), Quaternion.identity);
         path.Add(next);
+        backgroundDistance = (player.transform.position - background.transform.position).magnitude;
+        fakeGroundDistance = (player.transform.position - floor.transform.position).magnitude;
     }
 	
 	// Update is called once per frame
 	void Update () {
+        background.transform.position = (background.transform.position - player.transform.position).normalized * backgroundDistance + player.transform.position;
+        floor.transform.position = (floor.transform.position - player.transform.position).normalized * fakeGroundDistance + player.transform.position;
         if (player.transform.position.z > 86.1f + 172.2*counter2) {
             counter++;
             counter2++;
