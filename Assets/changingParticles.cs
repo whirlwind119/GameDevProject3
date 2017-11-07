@@ -6,6 +6,7 @@ public class changingParticles : MonoBehaviour {
 
 	List<GameObject> systems = new List<GameObject>();
 	List<GameObject> woofs = new List<GameObject>();
+	List<AudioClip> barks = new List<AudioClip>(); 
 	public GameObject player;
 
 	int prevCol;
@@ -16,7 +17,10 @@ public class changingParticles : MonoBehaviour {
 	AudioSource audio;
 	// Use this for initialization
 	void Start () {
-		
+
+		barks.Add (Resources.Load ("bark1")as AudioClip); 
+		barks.Add (Resources.Load ("bark2")as AudioClip);
+		barks.Add (Resources.Load ("bark3")as AudioClip);
 		prevCol = 0;
 		count = 0;
 
@@ -45,10 +49,11 @@ public class changingParticles : MonoBehaviour {
 				woof.transform.localScale = new Vector3 (scale, scale, scale);
 
 				audio = woof.AddComponent<AudioSource> ();
-				audio.clip = Resources.Load ("bark") as AudioClip; 
-				audio.Play ();
-				audio.volume = Random.value;
-				audio.panStereo = Random.Range(-1f, 1f);
+				audio.clip = barks [Random.Range(0,2)];
+				audio.volume = Random.Range(.2f, .6f);
+				audio.panStereo = Random.Range(-10f, 10f);
+				audio.loop = true;
+				audio.PlayDelayed(Random.Range(0f, 6f));
 
 				woofs.Add (woof);
 				count = 0;

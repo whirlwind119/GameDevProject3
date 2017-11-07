@@ -34,7 +34,7 @@ public class Movement : MonoBehaviour {
 	void Update () {
 
 		if (collisions > loseTotal) {
-			Debug.Log ("here");
+			//Debug.Log ("here");
 			SceneManager.LoadScene ("lose", LoadSceneMode.Single);
 		}
         if (Input.GetKey(KeyCode.A) && isGrounded) {
