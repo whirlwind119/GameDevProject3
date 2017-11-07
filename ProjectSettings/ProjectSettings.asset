@@ -3,7 +3,11 @@
 --- !u!129 &1
 PlayerSettings:
   m_ObjectHideFlags: 0
+<<<<<<< HEAD
   serializedVersion: 13
+=======
+  serializedVersion: 12
+>>>>>>> baba7fc422456069e1be9474232cdabb455281a2
   productGUID: eddbd3a8d0fd7314db428bc2524846d5
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
@@ -104,7 +108,10 @@ PlayerSettings:
   xboxOneMonoLoggingLevel: 0
   xboxOneLoggingLevel: 1
   xboxOneDisableEsram: 0
+<<<<<<< HEAD
   xboxOnePresentImmediateThreshold: 0
+=======
+>>>>>>> baba7fc422456069e1be9474232cdabb455281a2
   videoMemoryForVertexBuffers: 0
   psp2PowerMode: 0
   psp2AcquireBGM: 1
@@ -136,17 +143,25 @@ PlayerSettings:
     daydream:
       depthFormat: 0
       useSustainedPerformanceMode: 0
+<<<<<<< HEAD
       enableVideoLayer: 0
       useProtectedVideoMemory: 0
+=======
+>>>>>>> baba7fc422456069e1be9474232cdabb455281a2
     hololens:
       depthFormat: 1
   protectGraphicsMemory: 0
   useHDRDisplay: 0
+<<<<<<< HEAD
   m_ColorGamuts: 00000000
   targetPixelDensity: 0
   resolutionScalingMode: 0
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
+=======
+  targetPixelDensity: 0
+  resolutionScalingMode: 0
+>>>>>>> baba7fc422456069e1be9474232cdabb455281a2
   applicationIdentifier:
     Android: com.Company.ProductName
     Standalone: unity.DefaultCompany.GameDevProject3

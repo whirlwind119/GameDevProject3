@@ -22,7 +22,6 @@ public class Movement : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        obstacles = GameObject.FindGameObjectsWithTag("obstacle");
         zSpeedTemp = zSpeed;
         rb = GetComponent<Rigidbody>();
 		constZSpeed = zSpeed;
@@ -83,9 +82,10 @@ public class Movement : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision) {
         if(collision.transform.tag == "obstacle") {
+            obstacles = GameObject.FindGameObjectsWithTag("obstacle");
             blink = true;
             blinkTimer = 0f;
-            zSpeed = 0; 
+            zSpeed = 1; 
 			collisions += 1; 
         }
         if (collision.transform.tag == "ground") {
