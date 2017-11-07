@@ -1,12 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Movement : MonoBehaviour {
 
     public float zSpeed = .5f;
     public float xSpeed = 10;
     public float jump = 1000;
+	public int loseTotal = 7; 
+
     float zSpeedTemp;
     bool blink = false;
     float blinkTimer = 0f;
@@ -15,18 +18,24 @@ public class Movement : MonoBehaviour {
     bool isGrounded = true;
 	public float airModifier = .75f; 
 	float constZSpeed;
+	int collisions;
 	// Use this for initialization
 	void Start () {
         obstacles = GameObject.FindGameObjectsWithTag("obstacle");
         zSpeedTemp = zSpeed;
         rb = GetComponent<Rigidbody>();
 		constZSpeed = zSpeed;
+		collisions = 0; 
 
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
+		if (collisions > loseTotal) {
+			Debug.Log ("here");
+			SceneManager.LoadScene ("lose", LoadSceneMode.Single);
+		}
         if (Input.GetKey(KeyCode.A) && isGrounded) {
             transform.position = new Vector3(transform.position.x - xSpeed * Time.deltaTime, transform.position.y, transform.position.z + zSpeed * Time.deltaTime);
         }
@@ -76,6 +85,7 @@ public class Movement : MonoBehaviour {
             blink = true;
             blinkTimer = 0f;
             zSpeed = 0; 
+			collisions += 1; 
         }
         if (collision.transform.tag == "ground") {
             isGrounded = true;
