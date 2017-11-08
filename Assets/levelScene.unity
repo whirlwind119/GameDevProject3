@@ -442,7 +442,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4597451485776790, guid: 1931d31081cafa8449f1962d00773e1e, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1931d31081cafa8449f1962d00773e1e, type: 2}
@@ -1040,7 +1040,7 @@ MonoBehaviour:
   jump: 1000
   loseDist: 5
   collisions: 0
-  loseTrigger: {fileID: 0}
+  loseTrigger: {fileID: 412830483}
   airModifier: 0.75
 --- !u!54 &1478492870
 Rigidbody:
