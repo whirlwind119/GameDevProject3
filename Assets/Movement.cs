@@ -8,8 +8,9 @@ public class Movement : MonoBehaviour {
     public float zSpeed = .5f;
     public float xSpeed = 10;
     public float jump = 1000;
-	public int loseTotal = 7; 
+	public int loseDist = 5; 
 	public int collisions;
+    public GameObject loseTrigger;
 
     float zSpeedTemp;
     bool blink = false;
@@ -33,7 +34,7 @@ public class Movement : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if (collisions > loseTotal) {
+		if (transform.position.z - loseTrigger.transform.position.z < loseDist) {
 			//Debug.Log ("here");
 			SceneManager.LoadScene ("lose", LoadSceneMode.Single);
 		}
@@ -43,10 +44,7 @@ public class Movement : MonoBehaviour {
         else if (Input.GetKey(KeyCode.A) && !isGrounded) {
             transform.position = new Vector3(transform.position.x - xSpeed/4 * Time.deltaTime, transform.position.y, transform.position.z + zSpeed * Time.deltaTime);
         }
-        else {
-            transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + zSpeed * Time.deltaTime);
-        }
-        if (Input.GetKey(KeyCode.D) && isGrounded) {
+        else if (Input.GetKey(KeyCode.D) && isGrounded) {
             transform.position = new Vector3(transform.position.x + xSpeed * Time.deltaTime, transform.position.y, transform.position.z + zSpeed * Time.deltaTime);
         }
         else if (Input.GetKey(KeyCode.D) && !isGrounded) {
@@ -61,9 +59,13 @@ public class Movement : MonoBehaviour {
 			zSpeed = zSpeed * airModifier;
         }
         
-        if (blink) {
+        if (blinkTimer < 3f) {
             blinkTimer += Time.deltaTime;
-            zSpeed = zSpeedTemp * blinkTimer / 2;
+            zSpeed = zSpeedTemp * blinkTimer / 3;
+        }
+        else
+        {
+            zSpeed = zSpeedTemp;
         }
         if (blinkTimer < 2f && blink) {
             foreach (GameObject obstacle in obstacles) {
@@ -71,7 +73,6 @@ public class Movement : MonoBehaviour {
             }
         }
         if(blinkTimer >= 2f) {
-            zSpeed = zSpeedTemp;
             blink = false;
             foreach (GameObject obstacle in obstacles) {
                 Physics.IgnoreCollision(obstacle.GetComponent<Collider>(), GetComponent<Collider>(), false);
