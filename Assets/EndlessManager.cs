@@ -14,9 +14,9 @@ public class EndlessManager : MonoBehaviour {
     public GameObject level8;
     public GameObject leftWall;
     public GameObject rightWall;
-    public GameObject temp1;
-    public GameObject temp2;
 
+    private GameObject temp1;
+    private GameObject temp2;
     private int random;
     private GameObject current;
     private GameObject next;
@@ -57,7 +57,7 @@ public class EndlessManager : MonoBehaviour {
         floor.transform.position = (floor.transform.position - player.transform.position).normalized * fakeGroundDistance + player.transform.position;
         if (player.transform.position.z > 86.1f + 172.2*counter2) {
             
-            if (counter2 % 1 == 0) {
+            if (counter2 % 3 == 0) {
                 wallCounter+=2;
                 temp1 = Instantiate(leftWall, new Vector3(-13.86f, 15.8f, 170f + 463.6f * wallCounter), Quaternion.identity);
                 temp2 = Instantiate(rightWall, new Vector3(13.86f, 15.8f, 463.6f * wallCounter), Quaternion.identity);
