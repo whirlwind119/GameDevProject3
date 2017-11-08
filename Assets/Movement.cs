@@ -77,7 +77,7 @@ public class Movement : MonoBehaviour {
                 Physics.IgnoreCollision(obstacle.GetComponent<Collider>(), GetComponent<Collider>());
             }
         }
-        if (blinkTimer >= 2f) {
+        if (blink && blinkTimer >= 2f) {
             blink = false;
             foreach (GameObject obstacle in obstacles) {
                 Physics.IgnoreCollision(obstacle.GetComponent<Collider>(), GetComponent<Collider>(), false);

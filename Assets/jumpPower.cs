@@ -31,7 +31,7 @@ public class jumpPower : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider other){
-        Debug.Log("asdf");
+        //Debug.Log("asdf");
 		power = true;
 		player = other;
 		powerTimer = Time.time;
