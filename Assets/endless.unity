@@ -542,6 +542,8 @@ MonoBehaviour:
   level6: {fileID: 1092882798376732, guid: da6e77e2ad5a7834da3603ff0e6b409f, type: 2}
   level7: {fileID: 1094311881069676, guid: 48ddbf33bdb250843b88a346b186d6af, type: 2}
   level8: {fileID: 1203149227950856, guid: c35d8ee42190e0d43b377c63ff64f1b4, type: 2}
+  leftWall: {fileID: 0}
+  rightWall: {fileID: 0}
 --- !u!4 &701257261
 Transform:
   m_ObjectHideFlags: 0

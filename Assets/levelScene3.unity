@@ -132,7 +132,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 217684996}
-  follower: {fileID: 0}
+  follower: {fileID: 637485189}
   threshold: 15
   limit: 41
 --- !u!1 &58919956
@@ -176,7 +176,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 217684996}
-  follower: {fileID: 0}
+  follower: {fileID: 637485189}
   threshold: 15
   limit: 41
 --- !u!1001 &217684995
@@ -277,7 +277,7 @@ MonoBehaviour:
   jump: 1000
   loseDist: 5
   collisions: 0
-  loseTrigger: {fileID: 0}
+  loseTrigger: {fileID: 637485189}
   airModifier: 0.75
 --- !u!122 &217684999
 Halo:
@@ -358,7 +358,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 217684996}
-  follower: {fileID: 0}
+  follower: {fileID: 637485189}
   threshold: 15
   limit: 41
 --- !u!1 &243937224
@@ -548,7 +548,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 217684996}
-  follower: {fileID: 0}
+  follower: {fileID: 637485189}
   threshold: 15
   limit: 41
 --- !u!1 &372530822
@@ -1208,7 +1208,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 217684996}
-  follower: {fileID: 0}
+  follower: {fileID: 637485189}
   threshold: 15
   limit: 41
 --- !u!1 &938975884
@@ -1252,7 +1252,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 217684996}
-  follower: {fileID: 0}
+  follower: {fileID: 637485189}
   threshold: 15
   limit: 41
 --- !u!1 &987796380
@@ -1296,7 +1296,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 217684996}
-  follower: {fileID: 0}
+  follower: {fileID: 637485189}
   threshold: 15
   limit: 41
 --- !u!1 &991429010
@@ -1340,7 +1340,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 217684996}
-  follower: {fileID: 0}
+  follower: {fileID: 637485189}
   threshold: 15
   limit: 41
 --- !u!1001 &997626693
@@ -2022,7 +2022,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 217684996}
-  follower: {fileID: 0}
+  follower: {fileID: 637485189}
   threshold: 15
   limit: 41
 --- !u!1 &1665492274
@@ -2066,7 +2066,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 217684996}
-  follower: {fileID: 0}
+  follower: {fileID: 637485189}
   threshold: 15
   limit: 41
 --- !u!1 &1746202957
@@ -2110,7 +2110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 217684996}
-  follower: {fileID: 0}
+  follower: {fileID: 637485189}
   threshold: 15
   limit: 41
 --- !u!1 &1876347832
@@ -2154,7 +2154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 217684996}
-  follower: {fileID: 0}
+  follower: {fileID: 637485189}
   threshold: 15
   limit: 41
 --- !u!1 &1917197752
@@ -2627,7 +2627,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 217684996}
-  follower: {fileID: 0}
+  follower: {fileID: 637485189}
   threshold: 15
   limit: 41
 --- !u!1 &2080142055
