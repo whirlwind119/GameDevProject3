@@ -9,19 +9,21 @@ public class MoveUpDown : MonoBehaviour {
     public float upBound = 30;
     public float downBound = 50;
 
+    private float startZ;
+
     // Use this for initialization
     void Start () {
-		
+        startZ = transform.position.z;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        if (gameObject.transform.position.z <= upBound && zSpeed < 0)
+        if (transform.position.z <= startZ-upBound && zSpeed < 0)
         {
             zSpeed *= -1;
             ySpeed *= -1;
         }
-        else if (gameObject.transform.position.z >= downBound && zSpeed > 0)
+        else if (gameObject.transform.position.z >= startZ +downBound && zSpeed > 0)
         {
             zSpeed *= -1;
             ySpeed *= -1;
