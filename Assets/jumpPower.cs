@@ -17,16 +17,18 @@ public class jumpPower : MonoBehaviour {
 	void Update () {
 
 
-		if (power && Time.time -powerTimer <= 5f) {
+		if (power && Time.time -powerTimer <= 7f) {
 			//Debug.Log ("POWER");
 			player.GetComponent<Movement>().airModifier = air;
 			//Debug.Log (player.GetComponent<Movement> ().airModifier);
 		}
-		if (power && Time.time - powerTimer > 5f) {
+		if (power && Time.time - powerTimer > 7f) {
 			power = false; 
 			player.GetComponent<Movement> ().airModifier = constAir;
 			powerTimer = 0f;
-
+			GameObject haloHolder = player.gameObject.transform.FindChild ("haloHolder").gameObject;
+			Behaviour halo = (Behaviour)haloHolder.GetComponent ("Halo");
+			halo.enabled = false;
 		}
 	}
 
@@ -36,5 +38,8 @@ public class jumpPower : MonoBehaviour {
 		player = other;
 		powerTimer = Time.time;
 		constAir = player.GetComponent<Movement>().airModifier;
+		GameObject haloHolder = player.gameObject.transform.FindChild ("haloHolder").gameObject;
+		Behaviour halo = (Behaviour)haloHolder.GetComponent ("Halo");
+		halo.enabled = true;
 	}
 }
