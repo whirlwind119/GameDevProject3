@@ -11,6 +11,7 @@ public class changingParticles : MonoBehaviour {
     public GameObject follower;
     public float threshold = 3;
     public float limit = 41;
+	bool fade; 
 
 
 	int count; 
@@ -24,6 +25,7 @@ public class changingParticles : MonoBehaviour {
 		barks.Add (Resources.Load ("bark2")as AudioClip);
 		barks.Add (Resources.Load ("bark3")as AudioClip);
 		count = 0;
+		fade = false;
 
 	}
 	
@@ -73,13 +75,21 @@ public class changingParticles : MonoBehaviour {
             {
                 if (woofs.Count != 0)
                 {
-                    Destroy(woofs[woofs.Count - 1]);
-                    woofs.RemoveAt(woofs.Count - 1);
-                    
+					fade = true;  
                 }
             }
             count--;
         }
+
+		if (fade) {
+			woofs [woofs.Count - 1].GetComponent<AudioSource> ().volume += -.2f;
+
+			if(woofs [woofs.Count - 1].GetComponent<AudioSource> ().volume <= 0){
+				Destroy(woofs[woofs.Count - 1]);
+				woofs.RemoveAt(woofs.Count - 1);
+				fade = false;
+			}
+		}
 
 		for (int i = 0; i < systems.Count; i++) {
             
