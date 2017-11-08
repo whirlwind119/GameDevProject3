@@ -34,7 +34,7 @@ public class Movement : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-
+		Debug.Log ("existing");
         if (transform.position.z - loseTrigger.transform.position.z < loseDist) {
             //Debug.Log ("here");
             SceneManager.LoadScene("lose", LoadSceneMode.Single);
