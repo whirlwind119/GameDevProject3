@@ -417,7 +417,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 169425424}
   follower: {fileID: 2104276159}
-  threshold: 3
+  threshold: 15
   limit: 41
 --- !u!1 &324246709
 GameObject:
@@ -461,7 +461,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 169425424}
   follower: {fileID: 2104276159}
-  threshold: 3
+  threshold: 15
   limit: 41
 --- !u!1 &619907179
 GameObject:
@@ -505,7 +505,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 169425424}
   follower: {fileID: 2104276159}
-  threshold: 3
+  threshold: 15
   limit: 41
 --- !u!1 &701257259
 GameObject:
@@ -826,7 +826,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 169425424}
   follower: {fileID: 2104276159}
-  threshold: 3
+  threshold: 15
   limit: 41
 --- !u!1001 &901880682
 Prefab:
@@ -975,7 +975,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 169425424}
   follower: {fileID: 2104276159}
-  threshold: 3
+  threshold: 15
   limit: 41
 --- !u!1 &1414852275
 GameObject:
@@ -1019,7 +1019,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 169425424}
   follower: {fileID: 2104276159}
-  threshold: 3
+  threshold: 15
   limit: 41
 --- !u!1 &1491547835
 GameObject:
@@ -1232,7 +1232,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 169425424}
   follower: {fileID: 2104276159}
-  threshold: 3
+  threshold: 15
   limit: 41
 --- !u!1 &1703610018
 GameObject:
@@ -1276,7 +1276,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 169425424}
   follower: {fileID: 2104276159}
-  threshold: 3
+  threshold: 15
   limit: 41
 --- !u!1 &1746128945
 GameObject:
@@ -1407,7 +1407,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 169425424}
   follower: {fileID: 2104276159}
-  threshold: 3
+  threshold: 15
   limit: 41
 --- !u!1 &1935026885
 GameObject:
@@ -1499,7 +1499,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 169425424}
   follower: {fileID: 2104276159}
-  threshold: 3
+  threshold: 15
   limit: 41
 --- !u!1 &1967542492
 GameObject:
@@ -1543,7 +1543,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 169425424}
   follower: {fileID: 2104276159}
-  threshold: 3
+  threshold: 15
   limit: 41
 --- !u!1 &1993063765
 GameObject:
@@ -1587,7 +1587,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 169425424}
   follower: {fileID: 2104276159}
-  threshold: 3
+  threshold: 15
   limit: 41
 --- !u!1 &2091361219
 GameObject:
@@ -1631,7 +1631,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 169425424}
   follower: {fileID: 2104276159}
-  threshold: 3
+  threshold: 15
   limit: 41
 --- !u!1 &2104276159
 GameObject:
