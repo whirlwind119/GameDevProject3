@@ -1027,7 +1027,7 @@ MonoBehaviour:
   jump: 1000
   loseDist: 5
   collisions: 0
-  loseTrigger: {fileID: 0}
+  loseTrigger: {fileID: 412830483}
   airModifier: 0.75
 --- !u!54 &1478492870
 Rigidbody:
