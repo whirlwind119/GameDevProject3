@@ -20,7 +20,6 @@ public class Follow : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        Debug.Log(tracked.transform.position.z - transform.position.z, this);
         if (tracked.transform.position.z - transform.position.z  > clamp)
         {
             transform.position = new Vector3(transform.position.x,transform.position.y,tracked.transform.position.z - clamp);

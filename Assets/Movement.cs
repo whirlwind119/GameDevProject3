@@ -26,9 +26,10 @@ public class Movement : MonoBehaviour {
         zSpeedTemp = zSpeed;
         rb = GetComponent<Rigidbody>();
 		constZSpeed = zSpeed;
-		collisions = 0; 
+        collisions = 0;
+        obstacles = GameObject.FindGameObjectsWithTag("obstacle");
 
-	}
+    }
 	
 	// Update is called once per frame
 	void Update () {

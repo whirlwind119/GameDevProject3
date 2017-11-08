@@ -9,6 +9,9 @@ public class EndlessManager : MonoBehaviour {
     public GameObject level3;
     public GameObject level4;
     public GameObject level5;
+    public GameObject level6;
+    public GameObject level7;
+    public GameObject level8;
 
     private int random;
     private GameObject current;
@@ -29,10 +32,10 @@ public class EndlessManager : MonoBehaviour {
         player = GameObject.FindGameObjectWithTag("Player");
         background = GameObject.Find("background");
         floor = GameObject.Find("fakeGround");
-        random = Random.Range(1, 5);
+        random = Random.Range(1, 8);
         current = Instantiate(pickLevel(random), new Vector3(0f, 0f, 0f), Quaternion.identity);
         path.Add(current);
-        random = Random.Range(1, 5);
+        random = Random.Range(1, 8);
         next = pickLevel(random);
         if (next == current) {
             selectNext(random);
@@ -51,7 +54,7 @@ public class EndlessManager : MonoBehaviour {
             counter++;
             counter2++;
             current = next;
-            random = Random.Range(1, 5);
+            random = Random.Range(1, 8);
             next = pickLevel(random);
             if (next == current) {
                 selectNext(random);
@@ -83,6 +86,15 @@ public class EndlessManager : MonoBehaviour {
         if (randomInt == 5) {
             to_return = level5;
         }
+        if (randomInt == 6) {
+            to_return = level6;
+        }
+        if (randomInt == 7) {
+            to_return = level7;
+        }
+        if (randomInt == 8) {
+            to_return = level8;
+        }
         return to_return;
     }
 
@@ -102,6 +114,15 @@ public class EndlessManager : MonoBehaviour {
         }
         if (randomInt == 5) {
             to_return = level1;
+        }
+        if (randomInt == 6) {
+            to_return = level6;
+        }
+        if (randomInt == 7) {
+            to_return = level7;
+        }
+        if (randomInt == 8) {
+            to_return = level8;
         }
         return to_return;
     }
